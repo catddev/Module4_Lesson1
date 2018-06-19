@@ -149,17 +149,88 @@ start:
 	break;
 	case 8:
 	{
-
+		int popytka = 5;
+		int counter = 0;
+		int userNumber;
+		int zagadal = 100;
+		while (popytka-- != 0)
+		{
+			//vvesti chislo
+			cin >> userNumber;
+			counter++;
+			//proverit
+			//esli sovpalo vyvesti i  uiti
+			if (userNumber == zagadal)
+			{
+				if (popytka == 0)
+					cout << "SUPER!";
+				else 
+					cout << "ugadal s popytki" << counter << endl;
+				break;
+			}
+			//esli ne sovpalo - povtorit
+		}
 	}
 	break;
 	case 9:
 	{
-
+		bool exit = false;
+		while (!exit) // while (true) когда ты хочешь задать бесконечный цикл выполнения программы
+		{
+			int var = 0;
+			int USD = 0, TNG = 0;
+			cout << "1-to dollars, 2-to tenge, 3-exit" << endl;
+			cin >> var;
+			switch (var)
+			{
+			case 1:
+			{
+				cout << "How much?" << endl;
+				cin >> TNG;
+				cout << TNG / 320 << endl;;
+			}
+			break;
+			case 2:
+			{
+				cout << "How much?" << endl;
+				cin >> USD;
+				cout << USD * 320 << endl;
+			}
+			break;
+			case 3:
+				exit = true;
+			break;
+			}
+		}
 	}
 	break;
 	case 10:
 	{
+		/*int a;
+		char str[] = "Hello World!";
+		for (int i = 0; int i < length; int i++)
+		{
+			if (str[i]=="l")
+		}*/
 
+		int n = 1;
+		int popytka = 0;
+		cout << "Ia zagadal chislo!" << endl;
+		bool ugadal = false;
+		do
+		{
+			cout << "popytka N" << ++popytka << endl;
+			cout << "Vvedi svoe:";
+			int Number = rand() % 500;
+			cout << Number << endl;
+			if (n == Number)
+			{
+				ugadal = true;
+				cout << "Vy ugadali chislo s popytki=" << ++ popytka << endl;
+				break;
+			}
+		} while (!ugadal);
+		
 	}
 	break;
 	default:
